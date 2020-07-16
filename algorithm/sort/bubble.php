@@ -87,7 +87,6 @@ function bubble_better2($value =[]){
 
 $data=[1,0,4,34,54,5,9,15];
 
-echo "\n";
 echo "==========================冒泡排序========================= \n";
 echo "\n";
 print_r($data);
@@ -101,6 +100,6 @@ print_r(bubble_better1($data));
 echo "\n";
 echo "==========================优化排序后值2========================= \n";
 print_r(bubble_better2($data));
-die;
+exit();
 
 
