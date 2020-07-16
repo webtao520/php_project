@@ -9,8 +9,8 @@
 
 /**
  * 冒泡排序
- * @param [] $value 待排序数组
- * @return []
+ * @param array $value 待排序数组
+ * @return array
  */
 function bubble ($value =[]){
      $length=count($value)-1;
@@ -31,4 +31,76 @@ function bubble ($value =[]){
      return $value;
 }
 
-print_r(bubble([1,0,4,34,54,5,9,15]));
+/**
+ *  优化冒泡排序1
+ * @param array $value 待排序数组
+ * @return array
+ */
+function bubble_better1($value =[]){
+     $flag=true; // 标识 排序未完成
+     $length=count($value)-1; // 数组最后一个元素索引
+     $index=$length; // 最后一次交换的索引位置，初始值为最后一位
+     while($flag){
+         $flag=false;// 假设排序已完成
+         for ($i=0;$i<$index;$i++){
+             if($value[$i] > $value[$i+1]){
+                  $flag=true; // 如果还有交换发生，则排序未完成
+                  $last=$i; // 记录最后一次发生交换的索引位置
+                  $tmp=$value[$i];
+                  $value[$i]=$value[$i+1];
+                  $value[$i+1]=$tmp;
+
+             }
+         }
+         $index=!$flag?:$last;
+     }
+     return  $value;
+}
+
+/**
+ *  优化冒泡排序2
+ * @param array $value 待排序数组
+ * @return array
+ */
+function bubble_better2($value =[]){
+    if (count($value) <= 1) {
+        return $value;
+    }
+
+    for ($i = 0; $i < count($value); $i++) {
+        $flag = false;
+        for ($j = 0; $j < count($value) - $i - 1; $j++) {
+            if ($value[$j] > $value[$j+1]) {
+                $temp  = $value[$j];
+                $value[$j] = $value[$j+1];
+                $value[$j+1] = $temp;
+                $flag = true;
+            }
+        }
+        if (!$flag) {
+            break;
+        }
+    }
+
+    return $value;
+}
+
+$data=[1,0,4,34,54,5,9,15];
+
+echo "\n";
+echo "==========================冒泡排序========================= \n";
+echo "\n";
+print_r($data);
+echo "\n";
+echo "=========上为初始值==================下为排序后值============= \n";
+echo "\n";
+print_r(bubble($data));
+echo "\n";
+echo "==========================优化排序后值1========================= \n";
+print_r(bubble_better1($data));
+echo "\n";
+echo "==========================优化排序后值2========================= \n";
+print_r(bubble_better2($data));
+die;
+
+
