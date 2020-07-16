@@ -6,7 +6,7 @@
    + 时间复杂度表示代码执行时间随数据规模增长的变化趋势，表示方法图所示
    
    <p align="center">
-     <img src="https://qcdn.xueyuanjun.com/storage/uploads/images/gallery/2019-10/Fiq0znqOtHAcFX2AT-bQD47qUz0o.png" width="200px">
+     <img src="https://img2018.cnblogs.com/blog/535842/201908/535842-20190803100427077-335861869.png" width="200px">
    </p>
    
   + 即大O表示法，我们在分析时间复杂度的时候往往遵循以下原则：
@@ -28,7 +28,7 @@
  常见时间复杂度如下所示：
  
  <p align="center">
- <img src="https://qcdn.xueyuanjun.com/storage/uploads/images/gallery/2019-10/FmhDdduzmA0tsmLl8VytX5Z-4aSx.png"/>
+ <img src="https://img2018.cnblogs.com/blog/535842/201908/535842-20190803103034398-858168953.png"/>
  </p>
  
  + 时间复杂度里细分起来又有最好、最坏、平均情况时间复杂度之分：
