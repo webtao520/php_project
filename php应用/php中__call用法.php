@@ -1,19 +1,19 @@
 <?php
 /**
- * php 5.3 后新增了 call 与callStatic 魔法方法。
- * call 当要调用的方法不存在或权限不足时，会自动调用call 方法。
- *
- * callStatic 当调用的静态方法不存在或权限不足时，会自动调用callStatic方法。
- *
- * call($funcname, $arguments)
- *
- * callStatic($funcname, $arguments)
- *
- * 参数说明：
- *
- * $funcname String 调用的方法名称。
- *
- * $arguments Array 调用方法时所带的参数。
+          php 5.3 后新增了 call 与callStatic 魔法方法。
+          call 当要调用的方法不存在或权限不足时，会自动调用call 方法。
+
+          callStatic 当调用的静态方法不存在或权限不足时，会自动调用callStatic方法。
+
+          call($funcname, $arguments)
+
+          callStatic($funcname, $arguments)
+
+          参数说明：
+
+          $funcname String 调用的方法名称。
+
+          $arguments Array 调用方法时所带的参数。
  */
 
 // call 例子
