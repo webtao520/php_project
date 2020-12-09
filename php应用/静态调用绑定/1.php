@@ -21,5 +21,5 @@ class B extends A {
 
 echo A::test(); // A
 echo "_";
-echo B::test(); // A  因为self关键词只能取到定义当前方法所在的类，或者说它只能取到自己所在的那个类。
+echo (new B)->test(); // A  因为self关键词只能取到定义当前方法所在的类，或者说它只能取到自己所在的那个类。
 
