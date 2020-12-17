@@ -3,6 +3,7 @@
 
 // array_map ( callable $callback , array $array , array ...$arrays ) : array
 
+/*
 function show_Spanish($n, $m)
 {
     return "The number {$n} is called {$m} in Spanish";
@@ -21,3 +22,27 @@ print_r($c);
 
 $d = array_map('map_Spanish', $a , $b);
 print_r($d);
+*/
+
+
+/*
+$array = [1, 2, 3];
+var_dump(array_map(null, $array));
+*/
+
+$arr = array("stringkey" => "value");
+
+function cb1($a){
+    return [$a];
+}
+
+print_r(array_map('cb1',$arr));
+
+
+
+
+
+
+
+
+
