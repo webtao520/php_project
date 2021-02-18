@@ -114,3 +114,4 @@ $superman_2 = $container->make('superman', ['ultrabomb']);
 $superman_3 = $container->make('superman', ['xpower']);
 
 var_dump($superman_2);
+//var_dump($container['xpower']);
